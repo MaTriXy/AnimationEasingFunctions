@@ -45,12 +45,23 @@ Just like a glider.
 ```java
 AnimatorSet set = new AnimatorSet();
  set.playTogether(
-         Glider.glide(Skill.BounceEaseInOut, 1200, ObjectAnimator.ofFloat(mTarget, "translationY", 0, 100)
+         Glider.glide(Skill.BounceEaseInOut, 1200, ObjectAnimator.ofFloat(mTarget, "translationY", 0, 100))
  );
 
 set.setDuration(1200);
 set.start();
 ```
+
+#### Tips
+
+If you encounter exceptions such as `ClassNotFoundExceptions` ([#4](https://github.com/daimajia/AnimationEasingFunctions/issues/4)), please add the following to your `proguard-project.txt`:
+
+```
+-keep class com.daimajia.easing.** { *; }
+-keep interface com.daimajia.easing.** { *; }
+```
+
+More details [visit official guide](http://developer.android.com/tools/help/proguard.html#configuring).
 
 #About me
 
