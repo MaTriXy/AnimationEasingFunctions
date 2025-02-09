@@ -23,22 +23,15 @@ I found the [Easing Functions](http://easings.net/) made by [Robert Penne](http:
 Gradle
 
 ```groovy
-compile 'com.android.support:appcompat-v7:25.1.1'
-compile 'com.daimajia.easing:library:2.1@aar'
+implementation 'com.daimajia.easing:library:2.4@aar'
 ```
 or maven
 
 ```xml
 <dependency>
-    <groupId>com.android.support</groupId>
-    <artifactId>appcompat-v7</artifactId>
-    <version>25.1.1</version>
-    <type>apklib</type>
-</dependency>
-<dependency>
     <groupId>com.daimajia.easing</groupId>
     <artifactId>library</artifactId>
-    <version>2.1</version>
+    <version>2.4</version>
     <type>apklib</type>
 </dependency>
 ```
@@ -70,8 +63,7 @@ More details [visit official guide](http://developer.android.com/tools/help/prog
 
 # About me
 
-A student in mainland China. 
+A student in mainland China.
 
 Welcome to [offer me an internship](mailto:daimajia@gmail.com).
 If you have any new idea about this project, feel free to [contact me](mailto:daimajia@gmail.com).
-

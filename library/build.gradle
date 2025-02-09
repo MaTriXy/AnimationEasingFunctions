@@ -1,25 +1,25 @@
 apply plugin: 'com.android.library'
 
 android {
-    compileSdkVersion 25
-    buildToolsVersion "25.0.2"
+    compileSdkVersion COMPILE_SDK_VERSION.toInteger()
 
     defaultConfig {
-        minSdkVersion 11
-        targetSdkVersion 25
-        versionCode 5
-        versionName "2.1"
+        minSdkVersion MIN_SDK_VERSION.toInteger()
+        targetSdkVersion TARGET_SDK_VERSION.toInteger()
+        versionCode VERSION_CODE.toInteger()
+        versionName VERSION_NAME
     }
+
     buildTypes {
         release {
             minifyEnabled false
-            consumerProguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            consumerProguardFiles 'proguard-rules.pro'
         }
     }
 }
 
 dependencies {
-    compile fileTree(dir: 'libs', include: ['*.jar'])
-    compile 'com.android.support:appcompat-v7:25.1.1'
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
 }
+
 apply from: './gradle-mvn-push.gradle'
